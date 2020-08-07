@@ -1,0 +1,24 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "it is burger logger application",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitinmuk/burger.git"
+  },
+  "author": "Nitin Mukesh",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/nitinmuk/burger/issues"
+  },
+  "homepage": "https://github.com/nitinmuk/burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}
