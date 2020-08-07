@@ -1,4 +1,4 @@
-const { connection, getConnection } = require("./connection.js");
+const { getConnection } = require("./connection.js");
 
 const orm = {
     selectWhatWhere: ({ whatToSelect, table, colName, colValue }) => {
