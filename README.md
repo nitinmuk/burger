@@ -7,8 +7,8 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contributing)
-* [Screenshot](#screenshots)
-* [Application URL](#url)
+* [Screenshot](#screenshot)
+* [URL](#url)
 * [Questions](#questions)
 ## Installation
 Please download repository and run npm install and configure databse details in connection.js file. It is currently hosted in heroku as well and URL is given in relevant section.
@@ -22,7 +22,7 @@ You are most welcome to contribute. There are following ways to contribute:
 All requests will be reviewed and processed accordingly.
 ## Screenshot
 ![Eat_Da_Burger](./readme/Eat_Da_Burger.JPG)
-## Application URL
+## URL
 https://eat-delicious-burger.herokuapp.com/
 ## License
 This application is covered by [Unlicense](./LICENSE) license
