@@ -1,15 +1,19 @@
 // Set up MySQL connection.
 const mysql = require("mysql");
+let pool;
 
-const pool = mysql.createPool({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "root",
-  database: "burgers_db",
-  connectionLimit : 10
-});
-
+if (process.env.JAWSDB_URL) {
+  pool = mysql.createPool(process.env.JAWSDB_URL);
+} else {
+  pool = mysql.createPool({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "root",
+    database: "burgers_db",
+    connectionLimit: 10
+  });
+}
 //make connection.
 const getConnection = () => {
   return new Promise((resolve, reject) => {
@@ -27,6 +31,6 @@ const getConnection = () => {
 }
 
 // export connection for ORM.
-module.exports = {  
+module.exports = {
   getConnection
 };
