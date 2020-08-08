@@ -19,14 +19,12 @@ const orm = {
     insertOne: ({ table, cols, vals }) => {
         let queryString = `INSERT INTO ${table}`;
         queryString += ` (${cols.toString()}) VALUES (${printQuestionMarks(vals.length)}) `;
-        console.log(queryString);
         return createDataPromise(queryString, vals);
     },
     updateOne: ({ table, ColValsObj, whereObj }) => {
         let queryString = `UPDATE ?? SET ${objToSql(ColValsObj)} WHERE ${objToSql(whereObj).replace(",", " AND ")}`;
         const queryParamter = [];
         queryParamter.push(table);
-        console.log(queryString);
         return createDataPromise(queryString, queryParamter);
     }
 }
