@@ -3,6 +3,10 @@ const burger = require("../models/burger.js");
 
 const router = express.Router();
 
+/**
+ * provides a route to get all burger records.
+ * it returns an html generated using handlebars.
+ */
 router.get("/", (request, response) => {
     burger
         .all()
@@ -18,6 +22,10 @@ router.get("/", (request, response) => {
         });
 });
 
+/**
+ * it exposes a post request to create a new burger entry in database.
+ * returns the id of new created burger in database.
+ */
 router.post("/burgers", (request, response) => {
     burger
         .create(request.body)
@@ -28,6 +36,9 @@ router.post("/burgers", (request, response) => {
         });
 });
 
+/**
+ * it exposes a put request to update entry for a specific existing burger in database.
+ */
 router.put("/burgers/:id", (request, response) => {
     burger
         .update({

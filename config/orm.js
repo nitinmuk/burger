@@ -1,6 +1,8 @@
 const { getConnection } = require("./connection.js");
 
 const orm = {
+    // based on input objects, returns all or relevant from give table as part of response.
+    //it also returns a promise to get relevant data.
     selectWhatWhere: ({ whatToSelect, table, colName, colValue }) => {
         let queryString = "";
         let queryParamter = [];
@@ -16,11 +18,13 @@ const orm = {
         }
         return createDataPromise(queryString, queryParamter);
     },
+    // returns a promise about inserting a given record in given table.
     insertOne: ({ table, cols, vals }) => {
         let queryString = `INSERT INTO ${table}`;
         queryString += ` (${cols.toString()}) VALUES (${printQuestionMarks(vals.length)}) `;
         return createDataPromise(queryString, vals);
     },
+    // returns a promise about updating a given record for given table based on input object.
     updateOne: ({ table, ColValsObj, whereObj }) => {
         let queryString = `UPDATE ?? SET ${objToSql(ColValsObj)} WHERE ${objToSql(whereObj).replace(",", " AND ")}`;
         const queryParamter = [];
@@ -28,7 +32,7 @@ const orm = {
         return createDataPromise(queryString, queryParamter);
     }
 }
-
+// converts an object into a string array so that it can be used to create relevant sql.
 const objToSql = (object) => {
     const array = [];
     // loop through the keys and push the key/value as a string in the array
@@ -54,6 +58,7 @@ const printQuestionMarks = (count) => {
     return array.toString();
 }
 
+// creates a datapromise for given query and its query paramter.
 const createDataPromise = (query, queryParamter) => {
     return new Promise((resolve, reject) => {
         getConnection()

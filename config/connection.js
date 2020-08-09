@@ -1,7 +1,7 @@
 // Set up MySQL connection.
 const mysql = require("mysql");
 let pool;
-
+// pool is determined based on where the server is being deployed
 if (process.env.JAWSDB_URL) {
   pool = mysql.createPool(process.env.JAWSDB_URL);
 } else {
@@ -14,7 +14,7 @@ if (process.env.JAWSDB_URL) {
     connectionLimit: 10
   });
 }
-//make connection.
+// returns a promise about getting a connection from connection pool.
 const getConnection = () => {
   return new Promise((resolve, reject) => {
     pool.getConnection(function (error, connection) {
