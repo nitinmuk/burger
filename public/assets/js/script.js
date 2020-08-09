@@ -13,10 +13,8 @@ $(document).ready(() => {
             }).then(() => location.reload())
                 .catch(error => console.log(error));
         } else {
-            $("#burger-status-header").text("Burger Name is Missing");
-            $("#burger-status-content").text("Please enter a valid burger name.");
+            $("#burger-modal-status").modal();
         }
-        $(".create-form").trigger("reset");
     });
 
     $(document).on("click", ".devour-button", (event) => {

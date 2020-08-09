@@ -26,8 +26,19 @@
                         <div class="form-group">
                             <textarea class="form-control" id="burger-name" rows="3"></textarea>
                         </div>
-                        <button type="button" class="btn btn-primary burger-submit-btn" data-toggle="modal"
-                            data-target="#burger-modal-status">Submit</button>
+                        <button type="button" class="btn btn-primary burger-submit-btn">Submit</button>
+                        <div class="modal fade" id="burger-modal-status">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <h5 class="modal-title">Burger Name is Missing</h5>
+                                        <p>Please enter a valid burger name.</p>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <p>Enter a burger you want to eat and click the "Submit" button</p>
                     </form>
                 </div>
@@ -40,17 +51,6 @@
                     {{/if}}
                     {{/each}}
                 </ul>
-            </div>
-        </div>
-        <div class="modal fade" id="burger-modal-status">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <h5 class="modal-title"><span id="burger-status-header"></span></h5>
-                        <p><span id="burger-status-content"></span></p>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

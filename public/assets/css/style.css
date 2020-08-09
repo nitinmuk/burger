@@ -72,6 +72,6 @@ li {
     padding: 4%;
 }
 
-#burger-status-header {
+.modal-title {
     color: red;
 }
