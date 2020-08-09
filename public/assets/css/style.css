@@ -38,8 +38,12 @@ li {
 }
 
 .btn {
-    margin-left: 40%;
+    color: white;
     background-color: cadetblue;
+}
+
+.burger-submit-btn {
+    margin-left: 40%;
 }
 
 .footer {
@@ -57,12 +61,17 @@ li {
     cursor: pointer;
     margin: 2px;
 }
+
 .devoured-list {
-    opacity : 0.5;
+    opacity: 0.5;
 }
 
 .undevoured-list {
     margin-top: 2px;
     margin-bottom: 2px;
-    padding : 4%;
+    padding: 4%;
+}
+
+#burger-status-header {
+    color: red;
 }
