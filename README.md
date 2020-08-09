@@ -1,7 +1,7 @@
 # Eat Da Burger
 [![](https://img.shields.io/badge/License-Unlicense-green)](#license)
 ## Description
-Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat. It is built primarily using node.js, myswl, express and handlebars.
+Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat. It is built primarily using node.js, mysql, express and handlebars.
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
